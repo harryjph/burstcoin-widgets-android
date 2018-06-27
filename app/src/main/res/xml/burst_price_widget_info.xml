@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialKeyguardLayout="@layout/burst_price_widget"
+    android:initialLayout="@layout/burst_price_widget"
+    android:minHeight="@dimen/widget_minimum_height"
+    android:minWidth="@dimen/widget_minimum_width"
+    android:previewImage="@drawable/burst_icon_blue"
+    android:updatePeriodMillis="60000"
+    android:resizeMode="horizontal"
+    android:widgetCategory="home_screen" />

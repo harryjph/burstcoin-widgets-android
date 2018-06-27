@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:padding="@dimen/widget_margin"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_marginLeft="@dimen/logo_margin_horizontal"
+        android:layout_marginRight="@dimen/logo_margin_horizontal"
+        android:layout_marginTop="@dimen/logo_margin_vertical"
+        android:layout_marginBottom="@dimen/logo_margin_vertical"
+        android:layout_weight="1"
+        android:src="@drawable/burst_icon_white"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/burst_price_title"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:textSize="@dimen/text_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/burst_price_price_fiat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/burst_price_price"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_detail" />
+
+        <TextView
+            android:id="@+id/burst_price_market_capital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/burst_price_price"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_detail" />
+
+        <TextView
+            android:id="@+id/burst_price_price_bitcoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/burst_price_price"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_detail" />
+
+    </LinearLayout>
+
+</LinearLayout>

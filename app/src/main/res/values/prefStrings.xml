@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="burst_links">Burstcoin Links</string>
+    <string name="app_links">App Links</string>
+    <string name="burst_wallet">Download Burst Wallet</string>
+    <string name="burst_wallet_summary">Burstcoin Wallet for Android</string>
+    <string name="burst_telegram">Burstcoin Telegram</string>
+    <string name="burst_telegram_summary">Official Burstcoin Telegram</string>
+    <string name="burst_website">Burstcoin Website</string>
+    <string name="burst_website_summary">Official Burstcoin Website</string>
+    <string name="burst_pocc_explorer">Burstcoin Explorer by PoCC</string>
+    <string name="burst_pocc_explorer_summary">A web-based Burstcoin explorer provided by the PoC Consortium</string>
+    <string name="cryptoguru_discord">Cryptoguru Discord</string>
+    <string name="cryptoguru_discord_summary">The official Discord server of the PoC Consortium</string>
+    <string name="burst_wiki">Burst Wiki</string>
+    <string name="burst_wiki_summary">Community run Burstcoin Wiki</string>
+    <string name="app_github">View on GitHub</string>
+    <string name="app_github_summary">We\'re open source!</string>
+    <string name="contributors">Contributors</string>
+    <string name="contributors_summary">View who has contributed to this project</string>
+    <string name="app_donate" tools:keep="true">Donate</string>
+    <string name="app_donate_summary" tools:keep="true">This app is free, open source, and has no ads. It is built out of love for Burstcoin. Please consider donating!</string>
+    <string name="app_donate_copied" tools:keep="true">Donation address copied to clipboard.</string>
+    <string name="app_version">App version</string>
+    <string name="preferences">Preferences</string>
+    <string name="currency">Fiat Currency</string>
+    <string name="copied_to_clipboard">Copied to clipboard!</string>
+    <string name="node_address">Node Address</string>
+    <string name="reset_node_address">Reset Node Address</string>
+    <string name="reset_node_address_summary">Reset the node address to default if it isn\'t working</string>
+</resources>
