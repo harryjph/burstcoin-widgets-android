@@ -38,7 +38,7 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     // Burstcoin
-    implementation project(path: ':burstLibrary')
+    implementation 'com.github.harry1453:burstcoin-java:v1.0-rc1'
 
     // Volley
     implementation 'com.android.volley:volley:1.1.0'

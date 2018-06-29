@@ -69,6 +69,3 @@ release/
 
 # Keystore
 keystore/
-
-# Don't add the Burst Library for now as it will be removed soon
-burstLibrary/
