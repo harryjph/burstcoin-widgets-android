@@ -25,8 +25,8 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/burst_price_title"
-            android:text="@string/burst_price_title_refreshing"
+            android:id="@+id/burst_network_title"
+            android:text="@string/burst_network_title_refreshing"
             android:textColor="@color/white"
             android:gravity="center"
             android:textStyle="bold"
@@ -36,32 +36,32 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/burst_price_price_fiat"
+            android:id="@+id/burst_network_block_height"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/burst_price_price_loading"
+            android:text="@string/burst_network_block_height_loading"
             android:textColor="@color/white"
             android:textSize="@dimen/text_detail" />
 
         <TextView
-            android:id="@+id/burst_price_market_capital"
+            android:id="@+id/burst_network_public_node_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/burst_price_market_capital_loading"
+            android:text="@string/burst_network_public_node_count_loading"
             android:textColor="@color/white"
             android:textSize="@dimen/text_detail" />
 
         <TextView
-            android:id="@+id/burst_price_price_bitcoin"
+            android:id="@+id/burst_network_public_node_stats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/burst_price_price_loading"
+            android:text="@string/burst_network_public_node_stats_loading"
             android:textColor="@color/white"
             android:textSize="@dimen/text_detail" />
 
