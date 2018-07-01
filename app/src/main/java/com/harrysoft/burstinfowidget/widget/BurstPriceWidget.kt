@@ -27,28 +27,28 @@ class BurstPriceWidget : AppWidgetProvider() {
     private val compositeDisposable = CompositeDisposable()
 
     private fun updateWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int, priceService: BurstPriceService, configRepository: PreferenceConfigRepository) {
-        val views = RemoteViews(context.packageName, R.layout.burst_price_widget)
+        val views = RemoteViews(context.packageName, R.layout.burst_widget)
 
-        views.setTextViewText(R.id.burst_price_title, context.getString(R.string.burst_price_title_refreshing))
+        views.setTextViewText(R.id.burst_widget_title, context.getString(R.string.burst_price_title_refreshing))
         views.setOnClickPendingIntent(R.id.burst_logo_view, getUpdatePendingIntent(context, appWidgetId))
 
         appWidgetManager.updateAppWidget(appWidgetId, views)
 
         fun onFiatPrice(fiatPrice: BurstPrice) {
-            views.setTextViewText(R.id.burst_price_title, context.getString(R.string.burst_price_title))
-            views.setTextViewText(R.id.burst_price_price_fiat, context.getString(R.string.burst_price_price, fiatPrice.currencyCode, CurrencyUtils.formatCurrencyAmount(fiatPrice.currencyCode, fiatPrice.price, true)))
-            views.setTextViewText(R.id.burst_price_market_capital, context.getString(R.string.burst_price_market_capital, fiatPrice.currencyCode, CurrencyUtils.formatCurrencyAmount(fiatPrice.currencyCode, fiatPrice.marketCapital, false)))
+            views.setTextViewText(R.id.burst_widget_title, context.getString(R.string.burst_price_title))
+            views.setTextViewText(R.id.burst_widget_text1, context.getString(R.string.burst_price_price, fiatPrice.currencyCode, CurrencyUtils.formatCurrencyAmount(fiatPrice.currencyCode, fiatPrice.price, true)))
+            views.setTextViewText(R.id.burst_widget_text3, context.getString(R.string.burst_price_market_capital, fiatPrice.currencyCode, CurrencyUtils.formatCurrencyAmount(fiatPrice.currencyCode, fiatPrice.marketCapital, false)))
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
 
         fun onBitcoinPrice(bitcoinPrice: BurstPrice) {
-            views.setTextViewText(R.id.burst_price_title, context.getString(R.string.burst_price_title))
-            views.setTextViewText(R.id.burst_price_price_bitcoin, context.getString(R.string.burst_price_price, bitcoinPrice.currencyCode, CurrencyUtils.formatCurrencyAmount(context.getString(R.string.bitcoin_code), bitcoinPrice.price, true)))
+            views.setTextViewText(R.id.burst_widget_title, context.getString(R.string.burst_price_title))
+            views.setTextViewText(R.id.burst_widget_text2, context.getString(R.string.burst_price_price, bitcoinPrice.currencyCode, CurrencyUtils.formatCurrencyAmount(context.getString(R.string.bitcoin_code), bitcoinPrice.price, true)))
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
 
         fun onLoadError() {
-            views.setTextViewText(R.id.burst_price_title, context.getString(R.string.burst_price_title_refresh_error))
+            views.setTextViewText(R.id.burst_widget_title, context.getString(R.string.burst_price_title_refresh_error))
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
 

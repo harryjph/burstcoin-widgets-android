@@ -25,8 +25,8 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/burst_network_title"
-            android:text="@string/burst_network_title_refreshing"
+            android:id="@+id/burst_widget_title"
+            android:text="@string/burstcoin"
             android:textColor="@color/white"
             android:gravity="center"
             android:textStyle="bold"
@@ -36,32 +36,32 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/burst_network_block_height"
+            android:id="@+id/burst_widget_text1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/burst_network_block_height_loading"
+            android:text="@string/loading"
             android:textColor="@color/white"
             android:textSize="@dimen/text_detail" />
 
         <TextView
-            android:id="@+id/burst_network_public_node_count"
+            android:id="@+id/burst_widget_text2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/burst_network_public_node_count_loading"
+            android:text="@string/loading"
             android:textColor="@color/white"
             android:textSize="@dimen/text_detail" />
 
         <TextView
-            android:id="@+id/burst_network_public_node_stats"
+            android:id="@+id/burst_widget_text3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/burst_network_public_node_stats_loading"
+            android:text="@string/loading"
             android:textColor="@color/white"
             android:textSize="@dimen/text_detail" />
 

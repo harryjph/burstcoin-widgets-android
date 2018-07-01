@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">BurstInfoWidget</string>
+    <string name="burstcoin">Burstcoin</string>
     <string name="burst_logo_content_description">Burstcoin Logo</string>
     <string name="burst_price_title">Burstcoin Price</string>
     <string name="burst_price_title_refreshing">Burstcoin Price (Refreshing…)</string>

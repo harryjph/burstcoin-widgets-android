@@ -29,28 +29,28 @@ class BurstNetworkWidget : AppWidgetProvider() {
     private val compositeDisposable = CompositeDisposable()
 
     private fun updateWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int, blockchainService: BurstBlockchainService, networkService: BurstNetworkService, configRepository: PreferenceConfigRepository) {
-        val views = RemoteViews(context.packageName, R.layout.burst_network_widget)
+        val views = RemoteViews(context.packageName, R.layout.burst_widget)
 
-        views.setTextViewText(R.id.burst_network_title, context.getString(R.string.burst_network_title_refreshing))
+        views.setTextViewText(R.id.burst_widget_title, context.getString(R.string.burst_network_title_refreshing))
         views.setOnClickPendingIntent(R.id.burst_logo_view, getUpdatePendingIntent(context, appWidgetId))
 
         appWidgetManager.updateAppWidget(appWidgetId, views)
 
         fun onNetworkStatus(networkStatus: NetworkStatus) {
-            views.setTextViewText(R.id.burst_network_title, context.getString(R.string.burst_network_title))
-            views.setTextViewText(R.id.burst_network_public_node_count, context.getString(R.string.burst_network_public_node_count, networkStatus.peersData.peersStatus.total().toString()))
-            views.setTextViewText(R.id.burst_network_public_node_stats, context.getString(R.string.burst_network_public_node_stats, DecimalFormat("##.###").format(networkStatus.peersData.peersStatus.valid.toDouble() / networkStatus.peersData.peersStatus.total().toDouble() * 100)))
+            views.setTextViewText(R.id.burst_widget_title, context.getString(R.string.burst_network_title))
+            views.setTextViewText(R.id.burst_widget_text2, context.getString(R.string.burst_network_public_node_count, networkStatus.peersData.peersStatus.total().toString()))
+            views.setTextViewText(R.id.burst_widget_text3, context.getString(R.string.burst_network_public_node_stats, DecimalFormat("##.###").format(networkStatus.peersData.peersStatus.valid.toDouble() / networkStatus.peersData.peersStatus.total().toDouble() * 100)))
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
 
         fun onRecentBlocks(blocks: List<Block>) {
-            views.setTextViewText(R.id.burst_network_title, context.getString(R.string.burst_network_title))
-            views.setTextViewText(R.id.burst_network_block_height, context.getString(R.string.burst_network_block_height, blocks[0].blockNumber.toString()))
+            views.setTextViewText(R.id.burst_widget_title, context.getString(R.string.burst_network_title))
+            views.setTextViewText(R.id.burst_widget_text1, context.getString(R.string.burst_network_block_height, blocks[0].blockNumber.toString()))
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
 
         fun onLoadError() {
-            views.setTextViewText(R.id.burst_price_title, context.getString(R.string.burst_network_title_refresh_error))
+            views.setTextViewText(R.id.burst_widget_title, context.getString(R.string.burst_network_title_refresh_error))
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
 
