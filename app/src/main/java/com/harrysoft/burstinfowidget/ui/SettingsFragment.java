@@ -9,20 +9,21 @@ import android.support.v7.preference.EditTextPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
+import android.widget.Toast;
 
-import com.harry1453.burst.explorer.repository.ConfigRepository;
 import com.harrysoft.burstinfowidget.R;
 import com.harrysoft.burstinfowidget.repository.PreferenceConfigRepository;
+import com.harrysoft.burstinfowidget.repository.SharedPreferenceConfigRepository;
 import com.harrysoft.burstinfowidget.util.CurrencyUtils;
 import com.harrysoft.burstinfowidget.util.VersionUtils;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
-    ConfigRepository configRepository;
+    PreferenceConfigRepository configRepository;
 
     @Override
     public void onAttach(Context context) {
-        configRepository = new PreferenceConfigRepository(context);
+        configRepository = new SharedPreferenceConfigRepository(context);
         super.onAttach(context);
     }
 
@@ -40,6 +41,27 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         }
 
         String versionString = VersionUtils.getVersionName(getContext());
+
+        final EditTextPreference updateIntervalPreference = (EditTextPreference) findPreference(getString(R.string.update_interval_key));
+        updateIntervalPreference.setText(String.valueOf(configRepository.getUpdateInterval()));
+        updateIntervalPreference.setSummary(String.valueOf(configRepository.getUpdateInterval()));
+        updateIntervalPreference.setOnPreferenceChangeListener((preference, newValue) -> {
+            if (newValue instanceof String) {
+                try {
+                    int newInterval = Integer.parseInt((String) newValue);
+                    if (newInterval < 60) {
+                        Toast.makeText(getContext(), R.string.update_interval_error_less_than_60, Toast.LENGTH_LONG).show();
+                    } else {
+                        configRepository.setUpdateInterval(newInterval);
+                        updateIntervalPreference.setText(String.valueOf(newInterval));
+                        updateIntervalPreference.setSummary(String.valueOf(newInterval));
+                    }
+                } catch (NumberFormatException e) {
+                    Toast.makeText(getContext(), R.string.update_interval_error_invalid, Toast.LENGTH_LONG).show();
+                }
+            }
+            return false;
+        });
 
         final ListPreference currencyPreference = (ListPreference) findPreference(getString(R.string.currency_key));
         CurrencyUtils.setupCurrencyPreferenceData(getContext(), configRepository, currencyPreference);

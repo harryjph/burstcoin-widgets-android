@@ -28,4 +28,7 @@
     <string name="node_address">Node Address</string>
     <string name="reset_node_address">Reset Node Address</string>
     <string name="reset_node_address_summary">Reset the node address to default if it isn\'t working</string>
+    <string name="update_interval_title">Widget Update Interval (Seconds)</string>
+    <string name="update_interval_error_less_than_60">Update interval cannot be shorter than 60 seconds.</string>
+    <string name="update_interval_error_invalid">Invalid update interval - should be a whole number.</string>
 </resources>

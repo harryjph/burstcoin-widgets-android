@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="bitcoin_code">BTC</string>
+
+    <string name="update_interval_key">update_period</string>
+    <string name="update_interval_default_value">60</string>
 
     <string name="currency_key">currency</string>
     <string name="node_address_key">node_address</string>

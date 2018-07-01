@@ -4,14 +4,13 @@ import android.content.Context;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 
-import com.harry1453.burst.explorer.repository.ConfigRepository;
 import com.harrysoft.burstinfowidget.R;
 
-public class PreferenceConfigRepository implements ConfigRepository {
+public class SharedPreferenceConfigRepository implements PreferenceConfigRepository {
 
     private final Context context;
 
-    public PreferenceConfigRepository(Context context) {
+    public SharedPreferenceConfigRepository(Context context) {
         this.context = context;
     }
 
@@ -36,5 +35,19 @@ public class PreferenceConfigRepository implements ConfigRepository {
     @Override
     public String getNodeAddress() {
         return PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.node_address_key), context.getString(R.string.node_address_default));
+    }
+
+    @Override
+    public int getUpdateInterval() {
+        try {
+            return Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.update_interval_key), context.getString(R.string.update_interval_default_value)));
+        } catch (NumberFormatException e) {
+            return Integer.parseInt(context.getString(R.string.update_interval_default_value));
+        }
+    }
+
+    @Override
+    public void setUpdateInterval(int updateInterval) {
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putString(context.getString(R.string.update_interval_key), String.valueOf(updateInterval)).apply();
     }
 }
