@@ -1,8 +1,10 @@
 package com.harrysoft.burstinfowidget.ui;
 
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
+import android.content.Intent;
 import android.widget.RemoteViews;
 
 import com.harry1453.burst.explorer.repository.ConfigRepository;
@@ -26,6 +28,8 @@ public class BurstPriceWidget extends AppWidgetProvider {
         views.setTextViewText(R.id.burst_price_price_fiat, context.getString(R.string.burst_price_price, configRepository.getSelectedCurrency(), context.getString(R.string.loading)));
         views.setTextViewText(R.id.burst_price_market_capital, context.getString(R.string.burst_price_market_capital, configRepository.getSelectedCurrency(), context.getString(R.string.loading)));
         views.setTextViewText(R.id.burst_price_price_bitcoin, context.getString(R.string.burst_price_price, context.getString(R.string.bitcoin_code), context.getString(R.string.loading)));
+
+        views.setOnClickPendingIntent(R.id.burst_logo_view, PendingIntent.getBroadcast(context, appWidgetId, new Intent(context, BurstPriceWidget.class).setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE).putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, new int[]{appWidgetId}), PendingIntent.FLAG_UPDATE_CURRENT));
 
         appWidgetManager.updateAppWidget(appWidgetId, views);
 
