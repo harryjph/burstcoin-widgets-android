@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">BurstInfoWidget</string>
     <string name="burst_price_title">Burstcoin Price</string>
+    <string name="burst_price_title_refreshing">Burstcoin Price (Refreshing…)</string>
+    <string name="burst_price_title_refresh_error">Burstcoin Price (Error refreshing)</string>
     <string name="burst_price_price">Price (%1$s): %2$s</string>
+    <string name="burst_price_price_loading">Price: Loading…</string>
     <string name="burst_price_market_capital">Market Capital (%1$s): %2$s</string>
+    <string name="burst_price_market_capital_loading">Market Capital: Loading…</string>
     <string name="loading">Loading…</string>
-    <string name="error_loading">Error Loading</string>
 </resources>

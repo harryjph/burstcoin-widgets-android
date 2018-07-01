@@ -24,7 +24,8 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="@string/burst_price_title"
+            android:id="@+id/burst_price_title"
+            android:text="@string/burst_price_title_refreshing"
             android:textColor="@color/white"
             android:gravity="center"
             android:textStyle="bold"
@@ -39,7 +40,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/burst_price_price"
+            android:text="@string/burst_price_price_loading"
             android:textColor="@color/white"
             android:textSize="@dimen/text_detail" />
 
@@ -49,7 +50,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/burst_price_price"
+            android:text="@string/burst_price_market_capital_loading"
             android:textColor="@color/white"
             android:textSize="@dimen/text_detail" />
 
@@ -59,7 +60,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/burst_price_price"
+            android:text="@string/burst_price_price_loading"
             android:textColor="@color/white"
             android:textSize="@dimen/text_detail" />
 
