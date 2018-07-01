@@ -1,4 +1,4 @@
-package com.harrysoft.burstinfowidget.ui
+package com.harrysoft.burstinfowidget.widget
 
 import android.app.AlarmManager
 import android.app.PendingIntent
