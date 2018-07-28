@@ -19,6 +19,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.ConfigureAccountActivity"
+            android:theme="@style/Transparent"
+            android:excludeFromRecents="true" />
+
         <receiver android:name=".widget.BurstPriceWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -36,6 +40,17 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
+                android:resource="@xml/burst_widget_info" />
+        </receiver>
+
+        <receiver android:name=".widget.BurstAddressWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:value="ahello"
                 android:resource="@xml/burst_widget_info" />
         </receiver>
     </application>

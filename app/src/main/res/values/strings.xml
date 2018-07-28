@@ -20,4 +20,18 @@
     <string name="burst_network_public_node_count_loading">Loading Public Node Count…</string>
     <string name="burst_network_public_node_stats">%1$s%% Valid Public Nodes</string>
     <string name="burst_network_public_node_stats_loading">Loading Public Node Stats…</string>
+
+    <string name="save">Save</string>
+    <string name="saved">Saved</string>
+    <string name="error_saving">Error saving</string>
+    <string name="error_burst_rs_invalid">Invalid Burst Address.</string>
+    <string name="burst_account_title">%1$s</string>
+    <string name="burst_account_title_unloaded">Burstcoin Account</string>
+    <string name="burst_account_title_refresh_error">Burstcoin Account (Error Refreshing)</string>
+    <string name="burst_account_title_not_set">Burstcoin Account (Account not set)</string>
+    <string name="burst_account_hint_not_set">Tap here to set account</string>
+    <string name="burst_account_title_refreshing">%1$s (Refreshing…)</string>
+    <string name="burst_account_name">Name: %1$s</string>
+    <string name="burst_account_balance">Balance: %1$s</string>
+    <string name="burst_account_reward_recipient">Reward Recipient: %1$s</string>
 </resources>

@@ -8,16 +8,12 @@ import com.harrysoft.burstinfowidget.R
 class SharedPreferenceConfigRepository(private val context: Context) : PreferenceConfigRepository {
 
     override var selectedCurrency: String
-        get() =
-            PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.currency_key), context.getString(R.string.currency_default))
-        set(currencyCode) =
-            PreferenceManager.getDefaultSharedPreferences(context).edit().putString(context.getString(R.string.currency_key), currencyCode).apply()
+        get() = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.currency_key), context.getString(R.string.currency_default))
+        set(currencyCode) = PreferenceManager.getDefaultSharedPreferences(context).edit().putString(context.getString(R.string.currency_key), currencyCode).apply()
 
     override var nodeAddress: String
-        get() =
-            PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.node_address_key), context.getString(R.string.node_address_default))
-        set(nodeAddress) =
-            PreferenceManager.getDefaultSharedPreferences(context).edit().putString(context.getString(R.string.node_address_key), nodeAddress).apply()
+        get() = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.node_address_key), context.getString(R.string.node_address_default))
+        set(nodeAddress) = PreferenceManager.getDefaultSharedPreferences(context).edit().putString(context.getString(R.string.node_address_key), nodeAddress).apply()
 
     override var updateInterval: Int
         get() {
@@ -28,6 +24,5 @@ class SharedPreferenceConfigRepository(private val context: Context) : Preferenc
             }
 
         }
-        set(updateInterval) =
-            PreferenceManager.getDefaultSharedPreferences(context).edit().putString(context.getString(R.string.update_interval_key), updateInterval.toString()).apply()
+        set(updateInterval) = PreferenceManager.getDefaultSharedPreferences(context).edit().putString(context.getString(R.string.update_interval_key), updateInterval.toString()).apply()
 }

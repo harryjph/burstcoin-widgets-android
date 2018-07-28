@@ -85,7 +85,9 @@ class BurstPriceWidget : AppWidgetProvider() {
         compositeDisposable.dispose()
     }
 
-    private fun getUpdatePendingIntent(context: Context, appWidgetId: Int): PendingIntent {
-        return PendingIntent.getBroadcast(context, appWidgetId, Intent(context, BurstPriceWidget::class.java).setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE).putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, intArrayOf(appWidgetId)), PendingIntent.FLAG_UPDATE_CURRENT)
+    companion object {
+        fun getUpdatePendingIntent(context: Context, appWidgetId: Int): PendingIntent {
+            return PendingIntent.getBroadcast(context, appWidgetId, Intent(context, BurstPriceWidget::class.java).setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE).putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, intArrayOf(appWidgetId)), PendingIntent.FLAG_UPDATE_CURRENT)
+        }
     }
 }

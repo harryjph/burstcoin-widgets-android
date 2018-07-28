@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="bitcoin_code">BTC</string>
+    <string name="burst_rs_hint">BURST-XXXX-XXXX-XXXX-XXXXX</string>
+    <string name="db_name">burst_widgets_database</string>
 
     <string name="update_interval_key">update_period</string>
-    <string name="update_interval_default_value">60</string>
+    <string name="update_interval_default_value">600</string>
 
     <string name="currency_key">currency</string>
     <string name="node_address_key">node_address</string>
