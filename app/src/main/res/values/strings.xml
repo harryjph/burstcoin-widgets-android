@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">BurstInfoWidget</string>
+    <string name="app_name">Burstcoin Widgets</string>
+    <string name="widget_address">Burstcoin Address</string>
+    <string name="widget_network">Burstcoin Network</string>
+    <string name="widget_price">Burstcoin Price</string>
     <string name="burstcoin">Burstcoin</string>
     <string name="burst_logo_content_description">Burstcoin Logo</string>
     <string name="burst_price_title">Burstcoin Price</string>
@@ -18,7 +21,7 @@
     <string name="burst_network_block_height_loading">Block Height: Loading…</string>
     <string name="burst_network_public_node_count">%1$s Public Nodes</string>
     <string name="burst_network_public_node_count_loading">Loading Public Node Count…</string>
-    <string name="burst_network_public_node_stats">%1$s%% Valid Public Nodes</string>
+    <string name="burst_network_public_node_stats">%1$s%% Public Nodes Valid</string>
     <string name="burst_network_public_node_stats_loading">Loading Public Node Stats…</string>
 
     <string name="save">Save</string>

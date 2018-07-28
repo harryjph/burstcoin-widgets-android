@@ -6,9 +6,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/widget_preview"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.MainActivity">
@@ -23,7 +22,8 @@
             android:theme="@style/Transparent"
             android:excludeFromRecents="true" />
 
-        <receiver android:name=".widget.BurstPriceWidget">
+        <receiver android:name=".widget.BurstPriceWidget"
+            android:label="@string/widget_price" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -33,7 +33,8 @@
                 android:resource="@xml/burst_widget_info" />
         </receiver>
 
-        <receiver android:name=".widget.BurstNetworkWidget">
+        <receiver android:name=".widget.BurstNetworkWidget"
+            android:label="@string/widget_network" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -43,14 +44,14 @@
                 android:resource="@xml/burst_widget_info" />
         </receiver>
 
-        <receiver android:name=".widget.BurstAddressWidget">
+        <receiver android:name=".widget.BurstAddressWidget"
+            android:label="@string/widget_address" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:value="ahello"
                 android:resource="@xml/burst_widget_info" />
         </receiver>
     </application>

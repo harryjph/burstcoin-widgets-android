@@ -4,7 +4,7 @@
     android:initialLayout="@layout/burst_widget"
     android:minHeight="@dimen/widget_minimum_height"
     android:minWidth="@dimen/widget_minimum_width"
-    android:previewImage="@drawable/burst_icon_blue"
+    android:previewImage="@drawable/widget_preview"
     android:updatePeriodMillis="0"
     android:resizeMode="horizontal"
     android:widgetCategory="home_screen" />
