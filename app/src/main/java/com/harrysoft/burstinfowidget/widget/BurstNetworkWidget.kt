@@ -10,16 +10,14 @@ import android.os.SystemClock
 import android.widget.RemoteViews
 import com.harry1453.burst.explorer.entity.Block
 import com.harry1453.burst.explorer.entity.NetworkStatus
-
 import com.harry1453.burst.explorer.service.BurstBlockchainService
 import com.harry1453.burst.explorer.service.BurstNetworkService
 import com.harry1453.burst.explorer.service.BurstServiceProviders
 import com.harrysoft.burstinfowidget.R
 import com.harrysoft.burstinfowidget.repository.PreferenceConfigRepository
-import com.harrysoft.burstinfowidget.service.AndroidNetworkService
 import com.harrysoft.burstinfowidget.repository.SharedPreferenceConfigRepository
+import com.harrysoft.burstinfowidget.service.AndroidNetworkService
 import io.reactivex.android.schedulers.AndroidSchedulers
-
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import java.text.DecimalFormat

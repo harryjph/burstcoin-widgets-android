@@ -4,7 +4,6 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
-import android.arch.persistence.room.Room
 import android.content.Context
 import android.content.Intent
 import android.os.SystemClock
@@ -13,7 +12,6 @@ import com.harry1453.burst.explorer.entity.Account
 import com.harry1453.burst.explorer.service.BurstBlockchainService
 import com.harry1453.burst.explorer.service.BurstServiceProviders
 import com.harrysoft.burstinfowidget.R
-import com.harrysoft.burstinfowidget.db.BurstWidgetsDatabase
 import com.harrysoft.burstinfowidget.db.DatabaseUtils
 import com.harrysoft.burstinfowidget.db.SavedAccountDetails
 import com.harrysoft.burstinfowidget.repository.PreferenceConfigRepository
@@ -59,7 +57,7 @@ class BurstAddressWidget : AppWidgetProvider() {
                 savedAccount.rewardRecipientName = account.rewardRecipientName
 
                 compositeDisposable.add(DatabaseUtils.updateSavedAccountDetails(context, savedAccount)
-                        .subscribe({ onSavedAccount(savedAccount, false) }, { t -> t.printStackTrace(); onLoadError() }))
+                        .subscribe({ onSavedAccount(savedAccount, false) }, { onLoadError() }))
             }
 
             if (refresh) {
@@ -80,12 +78,12 @@ class BurstAddressWidget : AppWidgetProvider() {
 
             if (refresh) {
                 compositeDisposable.add(blockchainService.fetchAccount(account.address!!.getNumericID())
-                        .subscribe({ fetchedAccount -> onAccount(fetchedAccount) }, { t -> t.printStackTrace(); onLoadError() }))
+                        .subscribe({ fetchedAccount -> onAccount(fetchedAccount) }, { onLoadError() }))
             }
         }
 
         compositeDisposable.add(DatabaseUtils.getSavedAccountDetails(context, appWidgetId)
-                .subscribe({ recentBlocks -> onSavedAccount(recentBlocks, true) }, { t -> t.printStackTrace(); if (t.message == context.getString(R.string.burst_account_title_not_set)) onAccountNotSet() else onLoadError() }))
+                .subscribe({ recentBlocks -> onSavedAccount(recentBlocks, true) }, { t -> if (t.message == context.getString(R.string.burst_account_title_not_set)) onAccountNotSet() else onLoadError() }))
 
         val manager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 

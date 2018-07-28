@@ -8,16 +8,14 @@ import android.content.Context
 import android.content.Intent
 import android.os.SystemClock
 import android.widget.RemoteViews
-
 import com.harry1453.burst.explorer.entity.BurstPrice
 import com.harry1453.burst.explorer.service.BurstPriceService
 import com.harry1453.burst.explorer.service.BurstServiceProviders
 import com.harrysoft.burstinfowidget.R
 import com.harrysoft.burstinfowidget.repository.PreferenceConfigRepository
-import com.harrysoft.burstinfowidget.service.AndroidNetworkService
 import com.harrysoft.burstinfowidget.repository.SharedPreferenceConfigRepository
+import com.harrysoft.burstinfowidget.service.AndroidNetworkService
 import com.harrysoft.burstinfowidget.util.CurrencyUtils
-
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers

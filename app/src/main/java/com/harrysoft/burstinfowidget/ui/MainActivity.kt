@@ -1,7 +1,7 @@
 package com.harrysoft.burstinfowidget.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.harrysoft.burstinfowidget.R
 
 class MainActivity : AppCompatActivity() {
