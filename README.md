@@ -29,6 +29,8 @@ Please, if you decide to fork, obey the conditions set out in the license.
 For small contributions, please fork and open a pull request for your work to be merged.
 Please bear in mind the software patterns this project follows, specifically use of RxJava.
 
+This project also utilises [Burstcoin-Java](https://github.com/harry1453/burstcoin-java).
+
 For larger contributions, or to be added as a collaborator, please contact me (Telegram: [@harry1453](https://t.me/harry1453)).
 
 # Internationalization
