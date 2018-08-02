@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Burstcoin Widgets</string>
+    <string name="settings_title">Burstcoin Widgets - Settings</string>
     <string name="widget_address">Burstcoin Address</string>
     <string name="widget_network">Burstcoin Network</string>
     <string name="widget_price">Burstcoin Price</string>
