@@ -1,5 +1,7 @@
 # Burstcoin Widgets
 
+[![Build Status](https://travis-ci.com/harry1453/burstcoin-widgets-android.svg?branch=master)](https://travis-ci.com/harry1453/burstcoin-widgets-android)
+
 Burstcoin Widgets is a collection of homescreen widgets.
 
 Widgets include:
