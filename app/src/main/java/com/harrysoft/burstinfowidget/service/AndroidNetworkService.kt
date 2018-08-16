@@ -16,13 +16,9 @@ class AndroidNetworkService(context: Context) : NetworkService {
 
     override fun fetchData(url: String): Single<String> {
         return Single.create { emitter ->
-            try {
-                requestQueue.add(StringRequest(url, Response.Listener { emitter.onSuccess(it) }, Response.ErrorListener { emitter.onError(it) }))
-            } catch (t: Throwable) {
-                if (!emitter.isDisposed) {
-                    emitter.onError(t)
-                }
-            }
+            val request = StringRequest(url, Response.Listener { emitter.onSuccess(it) }, Response.ErrorListener { emitter.onError(it) })
+            requestQueue.add(request)
+            emitter.setCancellable { request.cancel() }
         }
     }
 }
